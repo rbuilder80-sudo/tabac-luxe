@@ -1,0 +1,17 @@
+[
+  {"slug":"marlboro-red-20","name":"Marlboro Red","category":"cigarettes","size":"20 pack","price":"Price on request","brand":"Marlboro","type":"Tobacco"},
+  {"slug":"lucky-strike-red-20","name":"Lucky Strike Red","category":"cigarettes","size":"20 pack","price":"Price on request","brand":"Lucky Strike","type":"Tobacco"},
+  {"slug":"ballantines-finest-70cl","name":"Ballantine’s Finest","category":"whisky","size":"70cl · 40%","price":"€13.60","brand":"Ballantine’s","type":"Alcohol & Drinks"},
+  {"slug":"chivas-regal-12-70cl","name":"Chivas Regal 12","category":"whisky","size":"70cl · 40%","price":"€25.50","brand":"Chivas Regal","type":"Alcohol & Drinks"},
+  {"slug":"jack-daniels-old-no7-1l","name":"Jack Daniel’s Old No.7","category":"whisky","size":"1L · 40%","price":"€22.90","brand":"Jack Daniel’s","type":"Alcohol & Drinks"},
+  {"slug":"absolut-vodka-70cl","name":"Absolut Vodka","category":"vodka","size":"70cl · 40%","price":"€12.90","brand":"Absolut","type":"Alcohol & Drinks"},
+  {"slug":"belvedere-vodka-70cl","name":"Belvedere","category":"vodka","size":"70cl · 40%","price":"€31.80","brand":"Belvedere","type":"Alcohol & Drinks"},
+  {"slug":"bombay-sapphire-70cl","name":"Bombay Sapphire","category":"gin","size":"70cl · 40%","price":"€17.50","brand":"Bombay Sapphire","type":"Alcohol & Drinks"},
+  {"slug":"hendricks-gin-70cl","name":"Hendrick’s Gin","category":"gin","size":"70cl · 41.4%","price":"€31.20","brand":"Hendrick’s","type":"Alcohol & Drinks"},
+  {"slug":"tanqueray-gin-70cl","name":"Tanqueray Gin","category":"gin","size":"70cl · 43.1%","price":"€15.90","brand":"Tanqueray","type":"Alcohol & Drinks"},
+  {"slug":"hennessy-vs-70cl","name":"Hennessy V.S.","category":"brandy","size":"70cl · 40%","price":"€33.90","brand":"Hennessy","type":"Alcohol & Drinks"},
+  {"slug":"corona-extra-33cl","name":"Corona Extra","category":"beer","size":"33cl · 4.5%","price":"€1.90","brand":"Corona","type":"Alcohol & Drinks"},
+  {"slug":"heineken-25cl","name":"Heineken","category":"beer","size":"25cl · 5%","price":"€0.90","brand":"Heineken","type":"Alcohol & Drinks"},
+  {"slug":"smirnoff-no21-1l","name":"Smirnoff No. 21","category":"vodka","size":"1L · 37.5%","price":"€13.95","brand":"Smirnoff","type":"Alcohol & Drinks"},
+  {"slug":"william-lawsons-1l","name":"William Lawson’s Whisky","category":"whisky","size":"1L · 40%","price":"€14.00","brand":"William Lawson’s","type":"Alcohol & Drinks"}
+]
