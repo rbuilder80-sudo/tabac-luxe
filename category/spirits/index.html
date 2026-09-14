@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/tabac-luxe/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spirits | Tabac Luxe Luxembourg</title>
+  <meta name="description" content="Rare whisky, cognac, champagne and vodka selections available in-store.">
+  <link rel="icon" href="logo.svg">
+  <style>
+    :root { color-scheme: light; --ink:#2d2118; --muted:#776656; --gold:#b8945a; --line:#e5d7bd; --paper:#fbf6ec; --cream:#efe2ca; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:linear-gradient(180deg,var(--paper),#fffaf1); }
+    header { position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px clamp(18px,4vw,52px); background:rgba(251,246,236,.88); border-bottom:1px solid var(--line); backdrop-filter:blur(16px); }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--ink); font-family: Georgia, "Times New Roman", serif; font-size:22px; }
+    .mark { display:grid; place-items:center; width:38px; height:38px; border:1px solid var(--gold); border-radius:50%; color:var(--gold); font-weight:700; }
+    nav { display:flex; gap:20px; flex-wrap:wrap; justify-content:flex-end; }
+    nav a { color:var(--muted); text-decoration:none; font-size:12px; letter-spacing:.18em; text-transform:uppercase; }
+    main { padding:clamp(34px,7vw,86px) clamp(18px,4vw,52px) 70px; }
+    .intro { max-width:980px; margin:0 auto 34px; }
+    .eyebrow { color:var(--gold); font-size:12px; letter-spacing:.34em; text-transform:uppercase; margin-bottom:16px; }
+    h1 { margin:0; font-family: Georgia, "Times New Roman", serif; font-size:clamp(46px,8vw,96px); line-height:.96; font-weight:500; }
+    p { max-width:760px; color:var(--muted); font-size:18px; line-height:1.7; }
+    .count { display:inline-flex; margin-top:14px; border:1px solid var(--line); padding:8px 12px; color:var(--gold); font-size:12px; letter-spacing:.22em; text-transform:uppercase; background:white; }
+    .grid { max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:18px; }
+    .card { display:flex; flex-direction:column; min-height:310px; text-decoration:none; color:var(--ink); background:rgba(255,255,255,.72); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:0 16px 45px rgba(91,65,34,.08); transition:transform .18s ease, box-shadow .18s ease; }
+    .card:hover { transform:translateY(-3px); box-shadow:0 20px 55px rgba(91,65,34,.14); }
+    .image { display:block; aspect-ratio:4/3; background:var(--cream); border-bottom:1px solid var(--line); }
+    .image img { width:100%; height:100%; object-fit:cover; display:block; }
+    .copy { display:flex; flex-direction:column; gap:10px; padding:15px; }
+    .name { font-family: Georgia, "Times New Roman", serif; font-size:20px; line-height:1.2; }
+    .price { color:var(--gold); font-weight:700; letter-spacing:.08em; }
+    footer { padding:28px clamp(18px,4vw,52px); border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    @media (max-width:640px) { header { align-items:flex-start; flex-direction:column; } nav { justify-content:flex-start; } .grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .card { min-height:250px; } .name { font-size:16px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="./"><span class="mark">T</span><span>Tabac Luxe</span></a>
+    <nav><a href="./">Home</a><a href="category/tobacco/">Tobacco</a><a href="category/spirits/">Spirits</a><a href="category/chocolate/">Chocolate</a></nav>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow">Luxembourg · In-store only · 18+</div>
+      <h1>Spirits</h1>
+      <p>Rare whisky, cognac, champagne and vodka selections available in-store.</p>
+      <span class="count">10 listings transferred</span>
+    </section>
+    <section class="grid" aria-label="Spirits listings">
+    <a class="card" href="product/aran-craft-scottish-vodka/">
+      <span class="image"><img src="products/aran-craft-scottish-vodka.jpg" alt="Aran Craft — Scottish Vodka"></span>
+      <span class="copy">
+        <span class="name">Aran Craft — Scottish Vodka</span>
+        <span class="price">€58 / 70cl</span>
+      </span>
+    </a>
+    <a class="card" href="product/belvedere-pure/">
+      <span class="image"><img src="products/belvedere-pure.jpg" alt="Belvedere Pure"></span>
+      <span class="copy">
+        <span class="name">Belvedere Pure</span>
+        <span class="price">€68 / 70cl</span>
+      </span>
+    </a>
+    <a class="card" href="product/veuve-clicquot-brut-yellow-label/">
+      <span class="image"><img src="products/veuve-clicquot-yellow-label.jpg" alt="Brut Yellow Label"></span>
+      <span class="copy">
+        <span class="name">Brut Yellow Label</span>
+        <span class="price">€78 / 75cl</span>
+      </span>
+    </a>
+    <a class="card" href="product/hennessy-xo/">
+      <span class="image"><img src="products/hennessy-xo.jpg" alt="Hennessy X.O"></span>
+      <span class="copy">
+        <span class="name">Hennessy X.O</span>
+        <span class="price">€320 / 70cl</span>
+      </span>
+    </a>
+    <a class="card" href="product/lagavulin-16/">
+      <span class="image"><img src="products/lagavulin-16.jpg" alt="Lagavulin 16 Years"></span>
+      <span class="copy">
+        <span class="name">Lagavulin 16 Years</span>
+        <span class="price">€260 / 70cl</span>
+      </span>
+    </a>
+    <a class="card" href="product/louis-xiii/">
+      <span class="image"><img src="products/louis-xiii.jpg" alt="Louis XIII"></span>
+      <span class="copy">
+        <span class="name">Louis XIII</span>
+        <span class="price">€4,200 / 70cl decanter</span>
+      </span>
+    </a>
+    <a class="card" href="product/martell-vsop/">
+      <span class="image"><img src="products/martell-vsop.jpg" alt="Martell VSOP"></span>
+      <span class="copy">
+        <span class="name">Martell VSOP</span>
+        <span class="price">€140 / 70cl</span>
+      </span>
+    </a>
+    <a class="card" href="product/moet-imperial/">
+      <span class="image"><img src="products/moet-imperial.jpg" alt="Moët Impérial"></span>
+      <span class="copy">
+        <span class="name">Moët Impérial</span>
+        <span class="price">€85 / 75cl</span>
+      </span>
+    </a>
+    <a class="card" href="product/macallan-18-sherry-oak/">
+      <span class="image"><img src="products/macallan-18-sherry-oak.jpg" alt="The Macallan 18 Years — Sherry Oak"></span>
+      <span class="copy">
+        <span class="name">The Macallan 18 Years — Sherry Oak</span>
+        <span class="price">€1,890 / 70cl</span>
+      </span>
+    </a>
+    <a class="card" href="product/yamazaki-18/">
+      <span class="image"><img src="products/yamazaki-18.jpg" alt="Yamazaki 18 Years"></span>
+      <span class="copy">
+        <span class="name">Yamazaki 18 Years</span>
+        <span class="price">€1,650 / 70cl</span>
+      </span>
+    </a></section>
+  </main>
+  <footer>© MMXXV Tabac Luxe. Product pages and images transferred from the source site.</footer>
+</body>
+</html>
