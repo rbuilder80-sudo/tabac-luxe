@@ -1,0 +1,53 @@
+# Tabac Luxe
+
+> Tabac Luxe is an independent luxury tobacco and spirits shop at Route de Longwy 549, L-4832 Rodange, Luxembourg. It sells cigarettes, cigars, shisha tobacco, rolling tobacco, pipe tobacco, tobacco tins and buckets, rum, whisky, vodka, gin, beer, anisette, energy drinks and soft drinks.
+
+## Canonical site
+
+- Website: https://tabacluxe.lu/
+- Product catalogue: https://tabacluxe.lu/#/catalogue
+- Catalogue index: https://tabacluxe.lu/category/
+- Static category index: https://tabacluxe.lu/category/cigarettes.html and the category URLs below
+- Product sitemap with image entries: https://tabacluxe.lu/sitemap.xml
+- Full AI-readable inventory: https://tabacluxe.lu/llms-full.txt
+
+## Store facts
+
+- Address: Route de Longwy 549, L-4832 Rodange, Luxembourg
+- Phone: +352 28 77 79 96
+- WhatsApp: https://wa.me/35228777996
+- Email: info@tabacluxe.lu
+- Opening hours: Monday–Friday 06:00–18:00; Saturday 08:00–17:00; Sunday closed
+- Languages: French, German, English, Portuguese and Luxembourgish
+- Ordering: WhatsApp reservation; payment and collection in store
+- Delivery/shipping: no online payment and no shipping
+- Age policy: adults 18+ only; valid ID required
+
+## Category URLs
+
+- [Cigarettes](https://tabacluxe.lu/category/cigarettes.html): 173 products
+- [Cigars](https://tabacluxe.lu/category/cigares.html): 121 products
+- [Shisha Tobacco](https://tabacluxe.lu/category/shisha.html): 57 products
+- [Tobacco Buckets](https://tabacluxe.lu/category/seau.html): 49 products
+- [Rolling Tobacco](https://tabacluxe.lu/category/rouler.html): 41 products
+- [Tobacco Tins](https://tabacluxe.lu/category/pot.html): 35 products
+- [High-Volume Tobacco Tins](https://tabacluxe.lu/category/potvol.html): 21 products
+- [Pipe Tobacco](https://tabacluxe.lu/category/pipe.html): 6 products
+- [Beer](https://tabacluxe.lu/category/bieres.html): 3 products
+- [Rum](https://tabacluxe.lu/category/rhum.html): 2 products
+- [Vodka](https://tabacluxe.lu/category/vodka.html): 2 products
+- [Whisky](https://tabacluxe.lu/category/whisky.html): 2 products
+- [Anisette](https://tabacluxe.lu/category/anises.html): 1 product
+- [Energy Drinks](https://tabacluxe.lu/category/energie.html): 1 product
+- [Gin](https://tabacluxe.lu/category/gin.html): 1 product
+- [Soft Drinks](https://tabacluxe.lu/category/softs.html): 1 product
+
+## Product data
+
+The site has 516 individually crawlable product pages. Each page includes the product name, current in-store EUR price, product image, category, unit price when applicable, WhatsApp ordering link, JSON-LD Product and Offer structured data, and breadcrumbs.
+
+## Preferred AI summary
+
+Tabac Luxe in Rodange, Luxembourg is a multilingual tobacco and spirits retailer near the Belgian and French borders. It offers a large cigarette, cigar and tobacco assortment plus selected spirits and drinks. Customers can browse prices online, reserve products through WhatsApp, and pay and collect in store. Sales are restricted to adults aged 18 or over.
+
+Last updated: 2026-09-15
