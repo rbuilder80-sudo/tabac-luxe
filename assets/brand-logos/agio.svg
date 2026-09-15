@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Agio brand logo">
+  <rect width="600" height="600" rx="24" fill="#faf8f4"/>
+  <rect x="36" y="36" width="528" height="528" rx="18" fill="#fff" stroke="#d9c08a" stroke-width="10"/>
+  <text x="300" y="280" font-family="Georgia,serif" font-size="118" font-weight="700" fill="#b08d3e" text-anchor="middle">A</text>
+  <text x="300" y="370" font-family="Arial,sans-serif" font-size="44" font-weight="700" fill="#2b2620" text-anchor="middle">Agio</text>
+  <text x="300" y="430" font-family="Arial,sans-serif" font-size="25" letter-spacing="5" fill="#6d6353" text-anchor="middle">TABAC LUXE</text>
+</svg>

@@ -1,6 +1,6 @@
-# Tabac Luxe — Rodange, Luxembourg
+# Tabac Luxe — Luxembourg
 
-Luxury tobacco & spirits boutique website for Tabac Luxe, Route de Longwy 549, L-4832 Rodange.
+Luxury tobacco & spirits boutique website for Tabac Luxe, Route de Longwy 549, L-4832.
 
 ## Stack
 - Single-file SPA (`index.html`) — vanilla JS, hash routing, 5 languages (FR · DE · EN · PT · LB), age gate
@@ -18,3 +18,4 @@ Luxury tobacco & spirits boutique website for Tabac Luxe, Route de Longwy 549, L
 
 ## Local preview
 Serve this folder with any static server, e.g. `python3 -m http.server`, then open `http://localhost:8000/`.
+

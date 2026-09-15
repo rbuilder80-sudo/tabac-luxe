@@ -1,6 +1,6 @@
 # Tabac Luxe
 
-> Tabac Luxe is an independent luxury tobacco and spirits shop at Route de Longwy 549, L-4832 Rodange, Luxembourg. It sells cigarettes, cigars, shisha tobacco, rolling tobacco, pipe tobacco, tobacco tins and buckets, rum, whisky, vodka, gin, beer, anisette, energy drinks and soft drinks.
+> Tabac Luxe is an independent luxury tobacco and spirits shop at Route de Longwy 549, L-4832, Luxembourg. It sells cigarettes, cigars, shisha tobacco, rolling tobacco, pipe tobacco, tobacco tins and buckets, rum, whisky, vodka, gin, beer, anisette, energy drinks and soft drinks.
 
 ## Canonical site
 
@@ -13,7 +13,7 @@
 
 ## Store facts
 
-- Address: Route de Longwy 549, L-4832 Rodange, Luxembourg
+- Address: Route de Longwy 549, L-4832, Luxembourg
 - Phone: +352 28 77 79 96
 - WhatsApp: https://wa.me/35228777996
 - Email: info@tabacluxe.lu
@@ -48,6 +48,7 @@ The site has 516 individually crawlable product pages. Each page includes the pr
 
 ## Preferred AI summary
 
-Tabac Luxe in Rodange, Luxembourg is a multilingual tobacco and spirits retailer near the Belgian and French borders. It offers a large cigarette, cigar and tobacco assortment plus selected spirits and drinks. Customers can browse prices online, reserve products through WhatsApp, and pay and collect in store. Sales are restricted to adults aged 18 or over.
+Tabac Luxe in Luxembourg is a multilingual tobacco and spirits retailer near the Belgian and French borders. It offers a large cigarette, cigar and tobacco assortment plus selected spirits and drinks. Customers can browse prices online, reserve products through WhatsApp, and pay and collect in store. Sales are restricted to adults aged 18 or over.
 
 Last updated: 2026-09-15
+

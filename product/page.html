@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tabac Luxe Rodange</title>
+<title>Tabac Luxe Luxembourg</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="8" fill="%232b2620"/><text x="32" y="44" font-family="Georgia,serif" font-size="34" fill="%23b08d3e" text-anchor="middle">TL</text></svg>'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,32 +25,37 @@ const STORAGE=SUPA+"/storage/v1/object/public/site-assets/";
 const CATDISP={shisha:"Shisha Tobacco",cigarettes:"Cigarettes",cigares:"Cigars",seau:"Tobacco Bucket",potvol:"Tobacco Tin High Volume",rhum:"Rum",pot:"Tobacco Tin",rouler:"Rolling Tobacco",pipe:"Pipe Tobacco",whisky:"Whisky",vodka:"Vodka",bieres:"Beer",gin:"Gin",anises:"Anisette",energie:"Energy Drinks",softs:"Soft Drinks"};
 const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#x27;");
 const fmt=x=>(+x).toFixed(2);
+const FORCE_LOGO_SLUGS=new Set(["the-turner-original-50g-rouler"]);
+function brandName(name){const w=String(name||"Tabac Luxe").trim().split(/\s+/).filter(Boolean);return w[0]&&w[0].toLowerCase()==="the"&&w[1]?w[0]+" "+w[1]:(w[0]||"Tabac Luxe");}
+function norm(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"");}
+function brandLogo(name){const brand=brandName(name).slice(0,28),init=(brand.split(/\s+/).map(w=>w[0]).join("").slice(0,3).toUpperCase()||"TL");const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><rect width="600" height="600" rx="24" fill="#faf8f4"/><rect x="36" y="36" width="528" height="528" rx="18" fill="#fff" stroke="#d9c08a" stroke-width="10"/><text x="300" y="280" font-family="Georgia,serif" font-size="118" font-weight="700" fill="#b08d3e" text-anchor="middle">${init}</text><text x="300" y="370" font-family="Arial,sans-serif" font-size="44" font-weight="700" fill="#2b2620" text-anchor="middle">${esc(brand)}</text><text x="300" y="430" font-family="Arial,sans-serif" font-size="25" letter-spacing="5" fill="#6d6353" text-anchor="middle">TABAC LUXE</text></svg>`;return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);}
+function imgUrl(p){if(!p.image||FORCE_LOGO_SLUGS.has(p.slug)||!norm(p.image).includes(norm(brandName(p.name))))return brandLogo(p.name);return p.image.startsWith("http")?p.image:STORAGE+p.image;}
 async function main(){
  const slug=new URLSearchParams(location.search).get("p");
  const r=await fetch(SUPA+"/rest/v1/products?slug=eq."+encodeURIComponent(slug)+"&select=*",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}});
  const rows=await r.json(); const p=rows[0];
  if(!p){document.getElementById("m").innerHTML="<p style='padding:60px 0;text-align:center'>Product not found. <a href='../index.html#/catalogue' style='color:var(--gold)'>Back to catalogue</a></p>";return;}
- const cat=p.category,cd=CATDISP[cat]||cat,price=fmt(p.price_eur),img=STORAGE+p.image;
- let desc=`Buy ${p.name} at Tabac Luxe, Route de Longwy 549, Rodange, Luxembourg. ${cd} at €${price}`;
+ const cat=p.category,cd=CATDISP[cat]||cat,price=fmt(p.price_eur),img=imgUrl(p);
+ let desc=`Buy ${p.name} at Tabac Luxe, Route de Longwy 549, Luxembourg. ${cd} at €${price}`;
  let unit="";
  if(p.unit_price){desc+=` (€${fmt(p.unit_price)}/${p.unit})`;unit=`<div class="unit">Unit price: €${fmt(p.unit_price)} / ${p.unit} · £${fmt(p.price_gbp)}</div>`;}
  desc+=". Order on WhatsApp, pay in store. Mon–Fri 6:00–18:00, Sat 8:00–17:00.";
- document.title=`${p.name} — €${price} | Tabac Luxe Rodange`;
+ document.title=`${p.name} — €${price} | Tabac Luxe`;
  const ld={"@context":"https://schema.org","@type":"Product",name:p.name,image:img,description:desc,category:cd,
   brand:{"@type":"Brand",name:p.name.split(" ")[0]},
   offers:{"@type":"Offer",url:"https://tabacluxe.lu/product/"+p.slug+".html",priceCurrency:"EUR",price:+p.price_eur,
    availability:"https://schema.org/InStoreOnly",itemCondition:"https://schema.org/NewCondition",
-   seller:{"@type":"Store",name:"Tabac Luxe",address:{"@type":"PostalAddress",streetAddress:"Route de Longwy 549",addressLocality:"Rodange",postalCode:"L-4832",addressCountry:"LU"}}}};
+   seller:{"@type":"Store",name:"Tabac Luxe",address:{"@type":"PostalAddress",streetAddress:"Route de Longwy 549",addressLocality:"",postalCode:"L-4832",addressCountry:"LU"}}}};
  const s=document.createElement("script");s.type="application/ld+json";s.textContent=JSON.stringify(ld,null,2);document.head.appendChild(s);
  const rr=await fetch(SUPA+"/rest/v1/products?category=eq."+encodeURIComponent(cat)+"&active=eq.true&order=slug&select=slug,name,price_eur,image&limit=5",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}});
  const rel=(await rr.json()).filter(q=>q.slug!==p.slug).slice(0,4).map(q=>
-  `<a class="rcard" href="page.html?p=${q.slug}"><div class="ri"><img src="${STORAGE+q.image}" alt="${esc(q.name)}" loading="lazy"></div><div class="rn">${esc(q.name)}</div><div class="rp">€${fmt(q.price_eur)}</div></a>`).join("");
+  `<a class="rcard" href="${q.slug}.html"><div class="ri"><img src="${imgUrl(q)}" alt="${esc(q.name)}" loading="lazy"></div><div class="rn">${esc(q.name)}</div><div class="rp">€${fmt(q.price_eur)}</div></a>`).join("");
  document.getElementById("m").innerHTML=`
 <nav class="crumbs"><a href="../index.html">Tabac Luxe</a> &nbsp;&rsaquo;&nbsp; <a href="../index.html#/catalogue/${cat}">${esc(cd)}</a> &nbsp;&rsaquo;&nbsp; ${esc(p.name)}</nav>
 <div class="wrap">
-<div class="imgbox"><img src="${img}" alt="${esc(p.name)} — ${esc(cd)} at Tabac Luxe Rodange"></div>
+<div class="imgbox"><img src="${img}" alt="${esc(p.name)} — ${esc(cd)} at Tabac Luxe"></div>
 <div>
-<div class="cat">${esc(cd)} · Rodange, Luxembourg</div>
+<div class="cat">${esc(cd)} · , Luxembourg</div>
 <h1>${esc(p.name)}</h1>
 <div class="rule"></div>
 <div class="price">€${price}</div>
@@ -63,7 +68,7 @@ ${unit}
 </div>
 <div class="info">
 <strong>TABAC LUXE</strong><br>
-Route de Longwy 549, L-4832 Rodange, Luxembourg<br>
+Route de Longwy 549, L-4832, Luxembourg<br>
 Mon–Fri 6:00–18:00 · Sat 8:00–17:00 · Sun closed<br>
 <a href="mailto:info@tabacluxe.lu" style="color:var(--gold);text-decoration:none">info@tabacluxe.lu</a> · +352 28 77 79 96
 </div>
@@ -73,3 +78,4 @@ main().catch(e=>{document.getElementById("m").innerHTML="<p style='padding:60px 
 </script>
 </body>
 </html>
+
