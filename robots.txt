@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tabacluxe.lu/sitemap.xml
