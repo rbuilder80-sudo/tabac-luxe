@@ -1,0 +1,8 @@
+2026-09-15 GitHub mirror complete — rbuilder80-sudo/tabac-luxe @ 9a6a106
+- repo wiped of legacy site (_next/, products/, category/) and replaced with current build
+- index.html: byte-identical to production (verified via raw fetch diff); asset URLs point to Supabase Storage bucket site-assets (530 binary assets, ~14.8MB)
+- sitemap.xml: 522 URLs, byte-identical to production
+- data/price_list.json: semantically equal to production (503 items, 8 categories)
+- product/page.html: dynamic product page (?p=slug) used by the repo copy; product/style.css shared stylesheet
+- build/template.html + build/generate_product_pages.py: regenerate all 516 static SEO pages from live Supabase (python3 build/generate_product_pages.py); generator verified byte-identical to production pages
+- verifier: README + v1 suite + v7 suite pushed; all files verified against local copies
