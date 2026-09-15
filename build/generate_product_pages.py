@@ -30,11 +30,26 @@ def fetch_products():
 def fmt(x):  # 17.9 -> "17.90"
     return f"{float(x):.2f}"
 
+def image_url(path):
+    if not path:
+        return STORAGE + "assets/hero/hero-main.jpg"
+    if str(path).startswith(("http://", "https://")):
+        return path
+    return STORAGE + str(path).lstrip("/")
+
+def keywords(p, catdisp):
+    brand = p["name"].split()[0]
+    return ", ".join(dict.fromkeys([
+        p["name"], brand, catdisp, "Tabac Luxe", "Rodange", "Luxembourg",
+        "tabac Luxembourg", "cigares Luxembourg", "shisha Luxembourg",
+        "prix tabac Luxembourg", "frontiere Belgique Luxembourg"
+    ]))
+
 def render(tpl, p, related):
     cat    = p["category"]
     catdisp = CATDISP.get(cat, cat.title())
     price  = fmt(p["price_eur"])
-    img    = STORAGE + p["image"]
+    img    = image_url(p.get("image"))
     desc   = (f"Buy {p['name']} at Tabac Luxe, Route de Longwy 549, Rodange, "
               f"Luxembourg. {catdisp} at €{price}")
     unitdiv = ""
@@ -48,7 +63,7 @@ def render(tpl, p, related):
     esc = lambda s: _h.escape(s, quote=True)
     rel = "".join(
         f'<a class="rcard" href="{q["slug"]}.html"><div class="ri">'
-        f'<img src="{STORAGE + q["image"]}" alt="{esc(q["name"])}" loading="lazy"></div>'
+        f'<img src="{image_url(q.get("image"))}" alt="{esc(q["name"])} at Tabac Luxe Rodange" loading="lazy"></div>'
         f'<div class="rn">{esc(q["name"])}</div><div class="rp">€{fmt(q["price_eur"])}</div></a>'
         for q in related)
     return (tpl.replace("{{ENAME}}", esc(p["name"])).replace("{{EDESC}}", esc(desc))
@@ -57,6 +72,7 @@ def render(tpl, p, related):
         .replace("{{CATKEY}}", cat).replace("{{CATDISP}}", catdisp)
         .replace("{{PRICENUM}}", repr(float(p["price_eur"]))).replace("{{PRICE}}", price)
         .replace("{{IMG}}", img).replace("{{BRAND}}", p["name"].split()[0])
+        .replace("{{KEYWORDS}}", esc(keywords(p, catdisp)))
         .replace("{{UNITDIV}}", unitdiv).replace("{{DESC}}", desc)
         .replace("{{RELATED}}", rel))
 

@@ -548,6 +548,10 @@ let LANG = localStorage.getItem('tl_lang') || 'fr';
 const t = k => (I18N[LANG] && I18N[LANG][k]) || I18N.fr[k] || k;
 const eur = n => n==null ? '' : '€' + Number(n).toFixed(2).replace('.',',');
 const gbp = n => n==null ? '' : '£' + Number(n).toFixed(2).replace('.',',');
+const storageUrl = path => {
+  if(!path) return '';
+  return /^https?:\/\//i.test(path) ? path : CONFIG.supaUrl + '/storage/v1/object/public/site-assets/' + path.replace(/^\/+/, '');
+};
 
 const CAT_ORDER = ['seau','pot','potvol','pipe','rouler','shisha','cigares','cigarettes','bieres','whisky','rhum','vodka','gin','anises','energie','softs'];
 const CAT_IMG = {
@@ -625,7 +629,9 @@ function toast(msg){
   setTimeout(()=>el.classList.remove('show'),2200);
 }
 function productCard(p){
-  const img = p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async">` :
+  const imgUrl = storageUrl(p.image);
+  const logoName = String(p.name || 'Tabac Luxe').replace(/"/g,'&quot;');
+  const img = imgUrl ? `<img src="${imgUrl}" alt="${p.name} — ${t('cat.'+p.category)||p.category} at Tabac Luxe Rodange" data-logo-name="${logoName}" loading="lazy" decoding="async" onerror="this.replaceWith(productLogo(this.dataset.logoName))">` :
     `<div style="font-family:var(--serif);font-size:2.6rem;color:var(--goldlt)">${p.name.split(' ')[0]}</div>`;
   const badge = p.deal? `<span class="pbadge">${t('card.deal')}</span>` : (p.featured? `<span class="pbadge new">${t('card.featured')}</span>`:'');
   const priceHtml = p.price_eur!=null
@@ -639,7 +645,13 @@ function productCard(p){
 }
 function openProduct(slug,ev){
   if(ev && ev.target.closest('button.add')) return; // let the Add-to-cart button work
-  window.location.href='product/page.html?p='+slug;
+  window.location.href='product/'+encodeURIComponent(slug)+'.html';
+}
+function productLogo(name){
+  const el=document.createElement('div');
+  el.style.cssText='font-family:var(--serif);font-size:2rem;color:var(--gold);text-align:center;line-height:1.1;padding:.5rem';
+  el.textContent=(name||'Tabac Luxe').split(' ').slice(0,2).join(' ');
+  return el;
 }
 function revealInit(){
   const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('vis'); io.unobserve(e.target);} }),{threshold:.12});
