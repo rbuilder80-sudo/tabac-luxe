@@ -54,7 +54,7 @@ for p in prods:
     if not os.path.exists(fp): continue
     h=open(fp,encoding='utf8').read()
     miss=[n for n in need if n not in h]
-    m=re.search(r'<img src="\.\.\/([^"]+)"', h)
+    m=re.search(r'<img src="\.\./([^"]+)"', h)
     if not m or not os.path.exists(os.path.join(ROOT,m.group(1))): miss.append('img-file')
     if miss: bad.append((p['slug'],miss))
 check('all product pages pass SEO+design field audit', not bad, f'{len(bad)} bad: {bad[:3]}')
