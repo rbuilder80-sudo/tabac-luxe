@@ -4,7 +4,7 @@ const CONFIG = {
   whatsapp: "35228777996",
   email: "info@tabacluxe.lu",
   phone: "+352 28 77 79 96",
-  address: "Route de Longwy 549, L-4832, Luxembourg",
+  address: "Luxembourg",
   supaUrl: "https://ujmblinyxfjvpntfkohz.supabase.co",
   supaKey: "sb_publishable_O65H3nPdVW5tA-ZZ7HoiVw_gI9M-iDr",
   adminPass: "luxe-admin",
@@ -583,7 +583,7 @@ const LEGAL = {
 terms:{fr:`
 <p class="updated">Dernière mise à jour : septembre 2026</p>
 <h3>1. Objet</h3>
-<p>Les présentes conditions générales régissent l'utilisation du site vitrine tabacluxe.lu, édité par Tabac Luxe S.à r.l., Route de Longwy 549, L-4832, Luxembourg (ci-après « Tabac Luxe »). Le site a une fonction exclusivement informative et de présentation.</p>
+<p>Les présentes conditions générales régissent l'utilisation du site vitrine tabacluxe.lu, édité par Tabac Luxe S.à r.l., Luxembourg (ci-après « Tabac Luxe »). Le site a une fonction exclusivement informative et de présentation.</p>
 <h3>2. Absence de vente en ligne</h3>
 <p>Tabac Luxe ne propose <b>aucune vente en ligne, aucun paiement en ligne et aucune livraison ou expédition</b>. Le panier et la commande via WhatsApp constituent uniquement une demande de réservation sans valeur contractuelle. Tout achat est conclu et payé exclusivement en magasin, après vérification de l'âge de l'acheteur.</p>
 <h3>3. Restriction d'âge</h3>
@@ -597,7 +597,7 @@ terms:{fr:`
 en:`
 <p class="updated">Last updated: September 2026</p>
 <h3>1. Purpose</h3>
-<p>These terms govern the use of the showcase website tabacluxe.lu, published by Tabac Luxe S.à r.l., Route de Longwy 549, L-4832, Luxembourg. The website is purely informational.</p>
+<p>These terms govern the use of the showcase website tabacluxe.lu, published by Tabac Luxe S.à r.l., Luxembourg. The website is purely informational.</p>
 <h3>2. No online sales</h3>
 <p>Tabac Luxe offers <b>no online sales, no online payment and no delivery or shipping</b>. The cart and WhatsApp ordering are reservation requests only, without contractual value. Every purchase is concluded and paid exclusively in store, after age verification.</p>
 <h3>3. Age restriction</h3>
@@ -611,7 +611,7 @@ en:`
 privacy:{fr:`
 <p class="updated">Dernière mise à jour : septembre 2026 — Conforme au RGPD (UE) 2016/679</p>
 <h3>1. Responsable de traitement</h3>
-<p>Tabac Luxe S.à r.l., Route de Longwy 549, L-4832, Luxembourg — info@tabacluxe.lu — +352 28 77 79 96.</p>
+<p>Tabac Luxe S.à r.l., Luxembourg — info@tabacluxe.lu — +352 28 77 79 96.</p>
 <h3>2. Données collectées</h3>
 <p>Ce site ne comporte <b>aucun formulaire de compte, aucun paiement et aucun cookie de suivi publicitaire</b>. Sont uniquement utilisés :</p>
 <ul>
@@ -628,7 +628,7 @@ privacy:{fr:`
 en:`
 <p class="updated">Last updated: September 2026 — GDPR (EU) 2016/679 compliant</p>
 <h3>1. Data controller</h3>
-<p>Tabac Luxe S.à r.l., Route de Longwy 549, L-4832, Luxembourg — info@tabacluxe.lu — +352 28 77 79 96.</p>
+<p>Tabac Luxe S.à r.l., Luxembourg — info@tabacluxe.lu — +352 28 77 79 96.</p>
 <h3>2. Data collected</h3>
 <p>This site has <b>no account forms, no payments and no advertising trackers</b>. Only the following are used:</p>
 <ul>
@@ -665,7 +665,7 @@ en:`
 notice:{fr:`
 <p class="updated">Dernière mise à jour : septembre 2026</p>
 <h3>Éditeur</h3>
-<p><b>Tabac Luxe S.à r.l.</b><br>Route de Longwy 549<br>L-4832<br>Grand-Duché de Luxembourg<br>E-mail : info@tabacluxe.lu<br>Tél. : +352 28 77 79 96</p>
+<p><b>Tabac Luxe S.à r.l.</b><br>Luxembourg<br>Grand-Duché de Luxembourg<br>E-mail : info@tabacluxe.lu<br>Tél. : +352 28 77 79 96</p>
 <h3>Activité</h3>
 <p>Commerce de détail de tabacs, cigares, articles pour fumeurs, boissons et produits assimilés. Établissement soumis à la législation luxembourgeoise sur la vente de tabac et d'alcool (licences en vigueur).</p>
 <h3>Hébergement</h3>
@@ -675,7 +675,7 @@ notice:{fr:`
 en:`
 <p class="updated">Last updated: September 2026</p>
 <h3>Publisher</h3>
-<p><b>Tabac Luxe S.à r.l.</b><br>Route de Longwy 549<br>L-4832<br>Grand Duchy of Luxembourg<br>Email: info@tabacluxe.lu<br>Tel: +352 28 77 79 96</p>
+<p><b>Tabac Luxe S.à r.l.</b><br>Luxembourg<br>Grand Duchy of Luxembourg<br>Email: info@tabacluxe.lu<br>Tel: +352 28 77 79 96</p>
 <h3>Activity</h3>
 <p>Retail of tobacco, cigars, smokers' articles, beverages and related products, operated under Luxembourg law on tobacco and alcohol sales (current licences).</p>
 <h3>Hosting</h3>

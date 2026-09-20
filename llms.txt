@@ -1,6 +1,6 @@
 # Tabac Luxe
 
-> Tabac Luxe is an independent luxury tobacco and spirits shop at Route de Longwy 549, L-4832, Luxembourg. It sells cigarettes, cigars, shisha tobacco, rolling tobacco, pipe tobacco, tobacco tins and buckets, rum, whisky, vodka, gin, beer, anisette, energy drinks and soft drinks.
+> Tabac Luxe is an independent luxury tobacco and spirits shop at Luxembourg. It sells cigarettes, cigars, shisha tobacco, rolling tobacco, pipe tobacco, tobacco tins and buckets, rum, whisky, vodka, gin, beer, anisette, energy drinks and soft drinks.
 
 ## Canonical site
 
@@ -13,7 +13,7 @@
 
 ## Store facts
 
-- Address: Route de Longwy 549, L-4832, Luxembourg
+- Address: Luxembourg
 - Phone: +352 28 77 79 96
 - WhatsApp: https://wa.me/35228777996
 - Email: info@tabacluxe.lu

@@ -1,6 +1,6 @@
 # Tabac Luxe — Luxembourg
 
-Luxury tobacco & spirits boutique website for Tabac Luxe, Route de Longwy 549, L-4832.
+Luxury tobacco & spirits boutique website for Tabac Luxe in Luxembourg
 
 ## Stack
 - Single-file SPA (`index.html`) — vanilla JS, hash routing, 5 languages (FR · DE · EN · PT · LB), age gate

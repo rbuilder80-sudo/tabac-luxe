@@ -165,7 +165,7 @@ def seo_description(p, catdisp):
             f"Compare {brand} prices at Tabac Luxe. WhatsApp order, in-store collection. Adults 18+ only.",
             178,
         )
-    return (f"Buy {name} at Tabac Luxe, Route de Longwy 549, Luxembourg. "
+    return (f"Buy {name} at Tabac Luxe in Luxembourg. "
             f"{catdisp} at €{price}{unit}. Order on WhatsApp, pay in store. "
             "Mon-Fri 6:00-18:00, Sat 8:00-17:00.")
 
