@@ -4,6 +4,7 @@
 User-agent: *
 Allow: /
 Sitemap: https://tabacluxe.lu/sitemap.xml
+Sitemap: https://tabacluxe.lu/sitemap-seo.xml
 
 # Google / AI Overviews and Gemini
 User-agent: Googlebot
