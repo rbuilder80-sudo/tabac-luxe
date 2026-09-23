@@ -435,7 +435,7 @@ function homeBelowHtml(){
       <div class="reveal"><h3>${t('info.hours')}</h3>
         <ul>
           <li><span>${t('hours.monfri')}</span><b>06:00 – 18:00</b></li>
-          <li><span>${t('hours.sat')}</span><b>08:00 – 17:00</b></li>
+          <li><span>${t('hours.sat')}</span><b>08:00 – 16:30</b></li>
           <li><span>${t('hours.sun')}</span><b class="closed">${t('hours.closed')}</b></li>
         </ul></div>
       <div class="reveal"><h3>${t('info.contact')}</h3>
@@ -566,7 +566,7 @@ function viewContact(){
         <p><a href="mailto:${CONFIG.email}" style="color:var(--gold2)">${CONFIG.email}</a><br><a href="tel:+35228777996" style="color:var(--gold2)">${CONFIG.phone}</a></p>
         <ul style="list-style:none;margin:1rem 0">
           <li style="display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:.4rem 0"><span>${t('hours.monfri')}</span><b>06:00 – 18:00</b></li>
-          <li style="display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:.4rem 0"><span>${t('hours.sat')}</span><b>08:00 – 17:00</b></li>
+          <li style="display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:.4rem 0"><span>${t('hours.sat')}</span><b>08:00 – 16:30</b></li>
           <li style="display:flex;justify-content:space-between;padding:.4rem 0"><span>${t('hours.sun')}</span><b class="closed">${t('hours.closed')}</b></li>
         </ul>
         <div class="btnrow" style="justify-content:flex-start">
@@ -790,7 +790,7 @@ function applyI18n(){
   document.documentElement.lang=LANG;
   document.querySelectorAll('[data-i18n]').forEach(el=>{ el.textContent=t(el.dataset.i18n); });
   document.getElementById('announceText').textContent =
-    `${t('hours.monfri')} 06:00–18:00 · ${t('hours.sat')} 08:00–17:00 · ${t('hours.sun')} ${t('hours.closed')} · ${CONFIG.address} · ${CONFIG.email} · ` + t('footer.age');
+    `${t('hours.monfri')} 06:00–18:00 · ${t('hours.sat')} 08:00–16:30 · ${t('hours.sun')} ${t('hours.closed')} · ${CONFIG.address} · ${CONFIG.email} · ` + t('footer.age');
   document.getElementById('wafab').href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t('wa.hello'))}`;
 }
 function buildLangs(){
