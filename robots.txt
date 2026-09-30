@@ -1,10 +1,9 @@
-# Tabac Luxe — Luxembourg
+# Tabac Luxe — Rodange, Luxembourg
 # Public catalogue, category, product and store-information pages are open to search and AI crawlers.
 
 User-agent: *
 Allow: /
 Sitemap: https://tabacluxe.lu/sitemap.xml
-Sitemap: https://tabacluxe.lu/sitemap-seo.xml
 
 # Google / AI Overviews and Gemini
 User-agent: Googlebot
@@ -95,4 +94,3 @@ Allow: /
 # Machine-readable AI site guides
 # https://tabacluxe.lu/llms.txt
 # https://tabacluxe.lu/llms-full.txt
-
