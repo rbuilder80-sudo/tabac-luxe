@@ -22,6 +22,30 @@ Showcase website for Tabac Luxe, the premium tobacco and spirits shop in Rodange
 | v11 | 2026-09-15 | Street address and telephone removed site-wide |
 | v10 | 2026-09-15 | Pre-launch SEO gate at 100%, handoff-ready |
 
+## Repository sync status (2026-10-01)
+
+This repo mirrors the production site (live version `77bce13`) as far as the text-only sync channel allows.
+
+**Mirrored and SHA-verified (repo blob hash == local `git hash-object`):**
+
+- `index.html`, `robots.txt`, `llms.txt`, `logo.svg`, `.nojekyll`, `CNAME`
+- Root utility pages: `promotions.html`, `contact.html`, `terms.html`, `privacy.html`, `disclaimer.html`, `legal-notice.html`
+- Category pages: `gin`, `pipe`, `rhum`, `softs`, `vodka`, `whisky` — byte-identical
+- `verifier/` suite (v10–v13) including audit scripts and run logs
+- `data/price_list.json` — content byte-identical; repo copy carries one extra trailing newline (verified: repo sha == hash(local + "\n"))
+- Category pages `anises`, `bieres`, `energie` — same single trailing-newline delta, hash-verified
+
+**Removed as stale (2026-10-01):** `app.js`, `styles.css`, `sitemap-seo.xml`, `build/` (old generator), `product/page.html`, `product/style.css`, and 15 superseded `en/`/`fr/` doorway pages.
+
+**Not mirrored through this channel:**
+
+- `sitemap.xml` (180 KB) and `llms-full.txt` (110 KB) — text-channel volume limit; local hashes: `e5465390a0eb…` / `037ee9a915e5…`. The repo copies are older revisions.
+- 8 minified pages with >2000-char lines (`price-list.html`, `category/{cigarettes,cigares,shisha,seau,rouler,pot,potvol,index}.html`) — cannot be transported losslessly line-wise.
+- 516 `product/*.html` pages (~7 MB) — volume-infeasible one file at a time; the repo keeps the previous-generation product pages for reference.
+- All binary assets (`assets/`, 29 MB of WebP/JPG) — text-only channel.
+
+A full byte-exact mirror (including binaries) requires one `git push` with a Personal Access Token from a machine holding the production tree.
+
 ## Legal
 
 Showcase only — no online sales, no shipping. Tobacco and alcohol sales are restricted to adults (18+).
