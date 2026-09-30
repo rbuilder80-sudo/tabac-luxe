@@ -62,3 +62,32 @@ Redesign per client request: light luxury palette (ivory/champagne-gold), catalo
   performance budgets (hero < 500KB, no heavy PNG, fetchpriority, lazy+async imgs, LU shots < 200KB)
 - speed: hero-main.png 3.2MB -> hero-main.jpg 381KB, cigars.png 1.7MB -> 127KB,
   decoding=async on catalogue images, fetchpriority=high on hero
+
+## v9 — 2026-09-15
+Pre-launch 99% on-page SEO and rendering gate. Adds full-page title/meta length and uniqueness checks,
+rendered H1 checks for SPA routes, static category-index coverage, OG/Twitter image-alt metadata,
+AI crawler/llms.txt checks, sitemap image validation, local HTTP crawl of every sitemap URL/image,
+and browser image-visibility checks. Also captures the fix for catalogue images being hidden by
+reveal animation timing: reveal content is visible by default and the first catalogue images are eager-loaded.
+See `verifier/v9/README.md` for the full acceptance criteria.
+
+## v10 — 2026-09-15
+Final pre-launch gate after adding crawlable static utility pages (promotions, price list, contact,
+terms, privacy, disclaimer and legal notice). The audit surface becomes 541 HTML pages plus the XML
+sitemap, robots.txt and AI-readable files. v10 keeps all v9 checks and adds static utility-page schema,
+link and browser-render coverage. See `verifier/v10/README.md`.
+
+## v11 — 2026-09-15T15:11:20Z
+- Owner request: removed street address (Route de Longwy 549, L-4832) and telephone (+352 28 77 79 96) from all pages, schema, meta and llms files.
+- geo.position/ICBM coordinates also removed; WhatsApp ordering links retained (number only inside wa.me URLs).
+- See v11/README.md for updated acceptance criteria.
+
+## v11.1 — 2026-09-15
+- UX fix: product-card images in grid containers used max-height:100% (cyclic percentage in grid -> unresolved), causing images to render at natural height, overlap neighbouring cards and intercept taps. Fixed with explicit max-height in index.html (.pimg img) and all 17 static category pages (.pcard .im img).
+- http_audit.py: human-like viewport-step scrolling, decode retry loop, evaluate timeouts, progress logging.
+
+## v12 — 2026-09-30T21:40:03Z
+- Unified professional theme: dark luxury header + rich footer across all 541 pages; catalogue toolbar with search/sort/chips; 61 placeholder product images replaced with brand logos/tiles.
+
+## v13 — 2026-10-01T06:00:00Z
+- Improvement bundle: WebP conversion (539 assets, ~48% smaller, og:image kept as JPG), mobile design pass (two-row header, 0px horizontal overflow verified), home Reviews section (3 testimonials) + visible FAQ section (5 Q&A matching FAQPage JSON-LD), all i18n keys in 5 languages, remaining hero JPG backgrounds switched to WebP.
