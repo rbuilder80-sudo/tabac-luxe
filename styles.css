@@ -224,3 +224,53 @@ footer a{display:inline-flex;align-items:center;min-height:28px}
 }
 @media(max-width:960px){main{min-height:6900px}.hero{background-image:none}}
 @media(max-width:560px){.cats{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr}.hero h1{font-size:2.4rem}.hero{min-height:72vh}.wafab{right:.9rem;bottom:.9rem}}
+
+/* Static SEO landing pages: isolate their compact content layout from the SPA
+   hero/section rules while retaining the site's visual identity. */
+.seo-page main{min-height:0}
+.seo-page section{padding:0}
+.seo-page .seo-hero{
+  position:relative;
+  min-height:560px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  isolation:isolate;
+  padding:clamp(3.5rem,8vw,6.5rem) clamp(1.25rem,5vw,4rem);
+  border-bottom:1px solid var(--line);
+  background:var(--dark) url('/assets/optimized/hero-main-760.webp') center/cover no-repeat;
+  color:#f6f1e6;
+  text-align:center;
+}
+.seo-page .seo-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(180deg,rgba(20,17,13,.66),rgba(20,17,13,.38) 45%,rgba(20,17,13,.76));
+}
+.seo-page .seo-hero .kicker{color:var(--goldlt);margin:0 0 1.15rem}
+.seo-page .seo-hero h1{
+  max-width:920px;
+  margin:0 0 1.25rem;
+  color:#f6f1e6;
+  font-size:clamp(2.35rem,4.6vw,3.8rem);
+  line-height:1.08;
+  text-wrap:balance;
+  overflow-wrap:normal;
+}
+.seo-page .seo-hero .lead{
+  max-width:680px;
+  margin:0 auto 2rem;
+  color:#f2eadb;
+  font-size:clamp(1rem,1.7vw,1.18rem);
+  font-weight:300;
+}
+.seo-page .seo-hero .cta{justify-content:center;margin-top:0}
+.seo-page:not(.app-ready) footer{display:block}
+@media(max-width:600px){
+  .seo-page .seo-hero{min-height:500px}
+  .seo-page .seo-hero h1{font-size:clamp(2rem,10vw,2.7rem)}
+}
