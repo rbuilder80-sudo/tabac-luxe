@@ -38,6 +38,7 @@ Redesign per client request: light luxury palette (ivory/champagne-gold), catalo
 - brand library: 40 brand photos in assets/brands/ + 30 product photos in assets/products/;
   category-level branded fallbacks guarantee 100% coverage
 
+
 ## v5 — BreadcrumbList rich results
 - check.py: v4 audit + requires "@type": "BreadcrumbList" JSON-LD on every product page (Google breadcrumb rich-result eligibility)
 - smoke.py: unchanged from v4
@@ -107,3 +108,10 @@ Restore `/en/wholesale-tobacco-luxembourg/` (first-page Google ranking lost to t
 cleanup). Ranking-critical elements preserved byte-for-byte; dead stylesheet/ doorway links repaired;
 sitemap gains the URL (542 total, lastmod 2026-10-01). Gate: v15 checks + dedicated en-landing checks.
 See `verifier/v16/README.md`.
+
+## v17 — 2026-10-01
+Restore all 15 ranked doorway pages deleted in the 2026-09-30 cleanup (spreadsheet of first-page
+Google keywords → 15 URLs, all 404). v16 restored one; v17 restores the remaining 14 (7 en + 7 fr)
+from pre-deletion commit dc12bca4 at their exact original URLs. Ranking elements byte-for-byte;
+only repair is removing the retired /styles.css link. Sitemap 542 → 556 (lastmod 2026-10-01).
+Gate: v16 checks generalized to all 15 doorway pages. See `verifier/v17/README.md`.
