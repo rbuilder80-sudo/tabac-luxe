@@ -1,0 +1,21 @@
+v17 live run 20261001T105017Z — all 15 restored doorway URLs on https://tabacluxe.lu (GitHub Pages, main)
+check per URL: HTTP 200, exactly one h1, GA G-VE6XGYJ7VP present, FAQPage JSON-LD present, self-canonical, zero rodange
+
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Cheapest Cigarettes in Luxembourg | Tabac Luxe — /en/cheapest-cigarettes-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Cigarette Wholesalers Luxembourg | Tabac Luxe Enquiries — /en/cigarette-wholesalers-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Flandria Tobacco 50g Luxembourg | Tabac Luxe — /en/flandria-tobacco-50g-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Luxembourg Tobacco Prices | Tabac Luxe Price Guide — /en/luxembourg-tobacco-prices/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Tobacco in Luxembourg – Prices & Shop Info | Tabac Luxe — /en/tobacco-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Tobacco Shop Luxembourg | Tabac Luxe Store Information — /en/tobacco-shop-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — The Turner 50g Luxembourg | Rolling Tobacco at Tabac Luxe — /en/turner-50g-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Tobacco Wholesalers Luxembourg | Tabac Luxe — /en/wholesale-tobacco-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Bureau de Tabac Luxembourg | Boutique Tabac Luxe — /fr/bureau-de-tabac-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Cigarette Winston Luxembourg Prix | Tabac Luxe — /fr/cigarette-winston-luxembourg-prix/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Prix Cigarette Luxembourg | Marques et Tarifs | Tabac Luxe — /fr/prix-cigarette-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Prix Tabac a Rouler Luxembourg | Tabac Luxe — /fr/prix-tabac-a-rouler-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Prix Tabac Luxembourg | Guide des prix Tabac Luxe — /fr/prix-tabac-luxembourg/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Tabac Luxembourg Frontiere | Guide Tabac Luxe — /fr/tabac-luxembourg-frontiere/
+200 OK h1:1 ga:ok faq:ok rodange:0 canonical:ok — Tabac Luxembourg Ouvert Actuellement | Tabac Luxe — /fr/tabac-luxembourg-ouvert-actuellement/
+
+live sitemap.xml: 556 urls (all 15 doorway URLs present)
+PASS — 15/15 restored doorway URLs live with ranking elements intact
