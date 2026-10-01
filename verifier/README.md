@@ -114,3 +114,12 @@ Google keywords → 15 URLs, all 404). v16 restored one; v17 restores the remain
 from pre-deletion commit dc12bca4 at their exact original URLs. Ranking elements byte-for-byte;
 only repair is removing the retired /styles.css link. Sitemap 542 → 556 (lastmod 2026-10-01).
 Gate: v16 checks generalized to all 15 doorway pages. See `verifier/v17/README.md`.
+
+## v18 — 2026-10-01
+WhatsApp button on every page. Audit found 21 of 556 HTML pages without any wa.me link
+(15 restored doorway pages + 6 utility pages). Fix: floating `.wafab` button (same design/SVG
+as the SPA, self-contained inline style + hardcoded wa.me/35228777996 href, EN/FR greeting)
+inserted before `</body>` on all 21; all other pages already expose WhatsApp (SPA floating
+button, product/category "Order via WhatsApp" CTA). Gate: v17 checks + every HTML page must
+contain a wa.me/ link — any future page without the button fails the gate.
+See `verifier/v18/README.md`.
