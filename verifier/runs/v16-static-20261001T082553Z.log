@@ -1,0 +1,17 @@
+v16 static gate — 2026-10-01T08:25:53Z
+================================
+Restore /en/wholesale-tobacco-luxembourg/ (404 after 2026-09-30 doorway cleanup;
+held first-page Google ranking).
+
+Command: python3 verifier/v16/check.py
+Result:
+  product pages matched to catalogue rows: 516, unmatched: 0
+  supabase products checked: 516
+  PASS — 541 pages + en landing page, rodange-free, images present and correct, sitemap complete
+
+Checks: v15 suite (541 pages, rodange sweep, Supabase image equality, sitemap file
+coverage) + sitemap now 542 URLs + dedicated en-landing checks (single h1, title/desc
+length, self-canonical, no /styles.css reference, all internal links resolve, JSON-LD
+valid).
+
+PASS

@@ -91,3 +91,19 @@ link and browser-render coverage. See `verifier/v10/README.md`.
 
 ## v13 — 2026-10-01T06:00:00Z
 - Improvement bundle: WebP conversion (539 assets, ~48% smaller, og:image kept as JPG), mobile design pass (two-row header, 0px horizontal overflow verified), home Reviews section (3 testimonials) + visible FAQ section (5 Q&A matching FAQPage JSON-LD), all i18n keys in 5 languages, remaining hero JPG backgrounds switched to WebP.
+
+## v14 — 2026-10-01
+Remove town name "Rodange" site-wide (545 files, 11,361 occurrences; FR/DE/EN/PT/LB-aware). Gate: zero case-insensitive "rodange" in public files + all JSON-LD valid + no new legacy-check failures + live http audit 0 errors. Scripts: v14/apply.py (migration), v14/check.py (gate).
+
+## v15 — 2026-10-01
+Pre-launch full-site certification + GitHub repush of the Rodange-removal text changes. Carries the
+v14 rodange sweep; adds per-page h1/title/description/JSON-LD gates on all 541 pages, image-existence
+and Supabase-equality image-correctness checks (516 catalogue rows as source of truth), exact sitemap
+coverage, browser audit with per-product-page layout assertions (visible .imgbox/.nm/.price/.cta) and
+390px horizontal-overflow check on every page, and SHA-verified GitHub repush. See `verifier/v15/README.md`.
+
+## v16 — 2026-10-01
+Restore `/en/wholesale-tobacco-luxembourg/` (first-page Google ranking lost to the 2026-09-30 doorway
+cleanup). Ranking-critical elements preserved byte-for-byte; dead stylesheet/ doorway links repaired;
+sitemap gains the URL (542 total, lastmod 2026-10-01). Gate: v15 checks + dedicated en-landing checks.
+See `verifier/v16/README.md`.
