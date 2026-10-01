@@ -1,0 +1,28 @@
+v16 live verification — 20261001T091310Z
+============================
+Trigger: https://tabacluxe.lu/en/wholesale-tobacco-luxembourg/ returned 404 after the
+2026-09-30 doorway cleanup although it held a first-page Google ranking.
+
+Fix deployed to GitHub Pages (repo rbuilder80-sudo/tabac-luxe, branch main):
+- commit bfdccd67  en/wholesale-tobacco-luxembourg/index.html + verifier/v16/*
+- commit 25638c1e  verifier/README.md + v16 static run log
+- commit d07c61ed  sitemap.xml (542 URLs, en page lastmod 2026-10-01)
+
+Repo blob SHA verification (local == remote):
+- sitemap.xml                          cc3a0a7a809c1585d24104bae9ad538364934584  180426 B  OK
+- en/wholesale-tobacco-luxembourg/     351562476cfd5b4a88534d7232be38ff9e612a22    7171 B  OK
+
+Live checks (curl against https://tabacluxe.lu):
+- GET /en/wholesale-tobacco-luxembourg/ ............ HTTP 200
+- <title> "Tobacco Wholesalers Luxembourg | Tabac Luxe" (ranked original, byte-identical)
+- <h1> "Tobacco Wholesalers Luxembourg" ............ present, exactly one
+- canonical -> self URL ........................... present
+- GA tag G-VE6XGYJ7VP ............................. present
+- FAQPage + WebPage JSON-LD ....................... present
+- "rodange" occurrences ........................... 0
+- /sitemap.xml contains the en URL ................ yes (1 entry)
+
+Static gate: verifier/v16/check.py PASS (run log v16-static-20261001T082553Z).
+
+RESULT: PASS — ranked URL restored live, ranking-critical elements preserved,
+dead stylesheet/doorway links repaired, sitemap re-crawl signal in place.
