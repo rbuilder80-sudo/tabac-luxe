@@ -1,0 +1,24 @@
+v18 live run 20261001T122000Z
+Live HTTP spot-check of all 21 wafab-patched pages on https://tabacluxe.lu (Cache-Control: no-cache):
+en/tobacco-luxembourg/ 200 wafab=1 wa.me=1 (9249 B)
+en/cheapest-cigarettes-luxembourg/ 200 wafab=1 wa.me=1 (8654 B)
+en/cigarette-wholesalers-luxembourg/ 200 wafab=1 wa.me=1
+en/flandria-tobacco-50g-luxembourg/ 200 wafab=1 wa.me=1
+en/luxembourg-tobacco-prices/ 200 wafab=1 wa.me=1
+en/tobacco-shop-luxembourg/ 200 wafab=1 wa.me=1
+en/turner-50g-luxembourg/ 200 wafab=1 wa.me=1
+en/wholesale-tobacco-luxembourg/ 200 wafab=1 wa.me=1
+fr/bureau-de-tabac-luxembourg/ 200 wafab=1 wa.me=1
+fr/cigarette-winston-luxembourg-prix/ 200 wafab=1 wa.me=1
+fr/prix-cigarette-luxembourg/ 200 wafab=1 wa.me=1
+fr/prix-tabac-a-rouler-luxembourg/ 200 wafab=1 wa.me=1
+fr/prix-tabac-luxembourg/ 200 wafab=1 wa.me=1 (8165 B)
+fr/tabac-luxembourg-frontiere/ 200 wafab=1 wa.me=1
+fr/tabac-luxembourg-ouvert-actuellement/ 200 wafab=1 wa.me=1
+disclaimer.html 200 wafab=1 wa.me=1 (14520 B)
+legal-notice.html 200 wafab=1 wa.me=1 (14381 B)
+privacy.html 200 wafab=1 wa.me=1 (14654 B)
+promotions.html 200 wafab=1 wa.me=1 (15377 B)
+terms.html 200 wafab=1 wa.me=1 (14661 B)
+price-list.html 200 wafab=1 wa.me=1 (94267 B)
+PASS — all 21 patched pages live with floating WhatsApp button (wa.me/35228777996); 556/556 pages covered
