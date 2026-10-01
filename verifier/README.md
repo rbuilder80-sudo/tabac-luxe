@@ -38,7 +38,6 @@ Redesign per client request: light luxury palette (ivory/champagne-gold), catalo
 - brand library: 40 brand photos in assets/brands/ + 30 product photos in assets/products/;
   category-level branded fallbacks guarantee 100% coverage
 
-
 ## v5 — BreadcrumbList rich results
 - check.py: v4 audit + requires "@type": "BreadcrumbList" JSON-LD on every product page (Google breadcrumb rich-result eligibility)
 - smoke.py: unchanged from v4
