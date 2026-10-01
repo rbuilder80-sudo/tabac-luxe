@@ -1,4 +1,4 @@
-# Tabac Luxe — Rodange, Luxembourg
+# Tabac Luxe — Luxembourg
 # Public catalogue, category, product and store-information pages are open to search and AI crawlers.
 
 User-agent: *
