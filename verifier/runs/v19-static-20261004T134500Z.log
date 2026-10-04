@@ -1,0 +1,6 @@
+v19 static gate run — 2026-10-04T13:45:00Z (local pre-deploy)
+cmd: python3 verifier/v19/check.py
+
+product pages matched to catalogue rows: 516, unmatched: 0
+supabase products checked: 516
+PASS — 541 pages + 15 doorway pages, CDN images on all pages, hover guarded, twitter/favicon/preconnect complete, CLS-safe images, sitemap 556 urls with lastmod+images, WhatsApp button on all 556 pages, rodange-free

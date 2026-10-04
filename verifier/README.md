@@ -123,3 +123,17 @@ inserted before `</body>` on all 21; all other pages already expose WhatsApp (SP
 button, product/category "Order via WhatsApp" CTA). Gate: v17 checks + every HTML page must
 contain a wa.me/ link — any future page without the button fails the gate.
 See `verifier/v18/README.md`.
+
+## v19 — 2026-10-04 — Mobile hardening + 100% on-page SEO + CDN image hosting
+User report: mobile layout/listing images wrong vs PC, product image needed two taps;
+requirement: 100% on-page score on every page, maximum search/AI-crawler friendliness.
+Audit found ALL images 404 live (1,080 assets never deployed — repo had only 6 asset
+files), 8 category pages 404 live, unguarded :hover on all 556 pages (iOS double-tap),
+missing img width/height (CLS), missing twitter cards on 15 doorway pages, no favicon.
+Fix: uploaded all 1,081 assets to Supabase Storage bucket `site-assets` (public,
+immutable cache), rewrote every asset ref in all 556 pages + 516 Supabase product rows
+to the CDN URL, guarded all hover rules (@media(hover:hover)), added touch-action,
+injected img width/height + decoding, added twitter cards/favicon/preconnect site-wide,
+2-col mobile listing grid, regenerated sitemap (556 urls, lastmod, image entries).
+Gate: v18 checks + CDN-only asset refs + hover guard + twitter/favicon/preconnect +
+img dims + sitemap lastmod/images. See `verifier/v19/README.md`.
